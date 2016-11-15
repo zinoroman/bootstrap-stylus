@@ -15,17 +15,10 @@
   touch-action manipulation
   cursor pointer
   background-image none // Reset unusual Firefox-on-Android default style see https://github.com/necolas/normalize.css/issues/214
-  border 1px solid transparent
+  border $control-base-bdw solid transparent
   white-space nowrap
-  button-size($padding-base-vertical, $padding-base-horizontal, $font-size-base, $line-height-base, $btn-border-radius-base)
+  button-size($control-base-height, $padding-base-horizontal, $font-size-base, $control-base-bdw, $btn-border-radius-base)
   user-select none
-
-  &,
-  &:active,
-  &.active
-    &:focus,
-    &.focus
-      tab-focus()
 
   &:hover,
   &:focus,
@@ -118,14 +111,14 @@
 
 .btn-lg
   // line-height ensure even-numbered height of button next to large input
-  button-size($padding-large-vertical, $padding-large-horizontal, $font-size-large, $line-height-large, $btn-border-radius-large)
+  button-size($control-large-height, $padding-large-horizontal, $control-large-fs, $control-large-bdw, $btn-border-radius-base)
 
 .btn-sm
   // line-height ensure proper height of button next to small input
-  button-size($padding-small-vertical, $padding-small-horizontal, $font-size-small, $line-height-small, $btn-border-radius-small)
+  button-size($control-small-height, $padding-small-horizontal, $control-small-fs, $control-small-bdw, $btn-border-radius-base)
 
 .btn-xs
-  button-size($padding-xs-vertical, $padding-xs-horizontal, $font-size-small, $line-height-small, $btn-border-radius-small)
+  button-size($control-xs-height, $padding-xs-horizontal, $control-xs-fs, $control-xs-bdw, $btn-border-radius-base)
 
 
 // Block button

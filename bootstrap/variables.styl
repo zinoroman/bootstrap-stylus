@@ -48,9 +48,9 @@ $font-family-serif ?=      Georgia, "Times New Roman", Times, serif
 $font-family-monospace ?=  Menlo, Monaco, Consolas, "Courier New", monospace
 $font-family-base ?=       $font-family-sans-serif
 
-$font-size-base ?=         14px
-$font-size-large ?=        ceil($font-size-base * 1.25) // ~18px
-$font-size-small ?=        ceil($font-size-base * 0.85) // ~12px
+$font-size-base ?=         16px
+$font-size-large ?=        18px
+$font-size-small ?=        14px
 
 $font-size-h1 ?=           floor($font-size-base * 2.6) // ~36px
 $font-size-h2 ?=           floor($font-size-base * 2.15) // ~30px
@@ -137,6 +137,34 @@ $table-bg-active ?=              $table-bg-hover
 //** Border color for table and cell borders.
 $table-border-color ?=           #ddd
 
+//== Controls
+//
+// ## Controls is elements like buttons or inputs
+
+//Xsmall control
+
+$control-xs-height = 30px
+$control-xs-bdw = 1px
+$control-xs-fs = $font-size-small 
+
+
+//Small control
+
+$control-small-height = 35px
+$control-small-bdw = 1px
+$control-small-fs = $font-size-small 
+
+//Base control
+
+$control-base-height = 40px
+$control-base-bdw = 1px
+$control-base-fs = $font-size-base 
+
+//Large control
+
+$control-large-height = 50px
+$control-large-bdw = 1px
+$control-large-fs = $font-size-large
 
 //== Buttons
 //
