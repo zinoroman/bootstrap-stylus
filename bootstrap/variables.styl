@@ -170,6 +170,15 @@ $control-large-fs = $font-size-large
 //
 //## For each of Bootstrap's buttons, define text, background and border color.
 
+//** Default `.form-control` height
+$btn-height-base ?=              $control-base-height
+//** Large `.form-control` height
+$btn-height-large ?=             $control-large-height
+//** Small `.form-control` height
+$btn-height-small ?=             $control-small-height
+//** Small `.form-control` height
+$btn-height-xs ?=             $control-xs-height
+
 $btn-font-weight ?=              normal
 
 $btn-default-color ?=            #333
@@ -234,11 +243,11 @@ $input-border-focus ?=           #66afe9
 $input-color-placeholder ?=      #999
 
 //** Default `.form-control` height
-$input-height-base ?=              ($line-height-computed + ($padding-base-vertical * 2) + 2)
+$input-height-base ?=              $control-base-height
 //** Large `.form-control` height
-$input-height-large ?=             (ceil($font-size-large * $line-height-large) + ($padding-large-vertical * 2) + 2)
+$input-height-large ?=             $control-large-height
 //** Small `.form-control` height
-$input-height-small ?=             (floor($font-size-small * $line-height-small) + ($padding-small-vertical * 2) + 2)
+$input-height-small ?=             $control-small-height
 
 //** `.form-group` margin
 $form-group-margin-bottom ?=       15px
