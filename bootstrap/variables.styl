@@ -170,13 +170,13 @@ $control-large-fs = $font-size-large
 //
 //## For each of Bootstrap's buttons, define text, background and border color.
 
-//** Default `.form-control` height
+//** Default `.btn` height
 $btn-height-base ?=              $control-base-height
-//** Large `.form-control` height
+//** Large `.btn` height
 $btn-height-large ?=             $control-large-height
-//** Small `.form-control` height
+//** Small `.btn` height
 $btn-height-small ?=             $control-small-height
-//** Small `.form-control` height
+//** XS `.btn` height
 $btn-height-xs ?=             $control-xs-height
 
 $btn-font-weight ?=              normal
@@ -185,6 +185,9 @@ $btn-default-color ?=            #333
 $btn-default-bg ?=               #fff
 $btn-default-border ?=           #ccc
 
+$btn-info-color ?=               #fff
+$btn-info-bg ?=                  $brand-info
+$btn-info-border ?=              darken($btn-info-bg, 5)
 $btn-primary-color ?=            #fff
 $btn-primary-bg ?=               $brand-primary
 $btn-primary-border ?=           darken($btn-primary-bg, 5)
@@ -193,9 +196,6 @@ $btn-success-color ?=            #fff
 $btn-success-bg ?=               $brand-success
 $btn-success-border ?=           darken($btn-success-bg, 5)
 
-$btn-info-color ?=               #fff
-$btn-info-bg ?=                  $brand-info
-$btn-info-border ?=              darken($btn-info-bg, 5)
 
 $btn-warning-color ?=            #fff
 $btn-warning-bg ?=               $brand-warning
