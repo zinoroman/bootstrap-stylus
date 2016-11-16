@@ -68,6 +68,25 @@
 .btn-danger
   button-variant($btn-danger-color, $btn-danger-bg, $btn-danger-border)
 
+.btn-icon
+  min-width $btn-height-base
+
+  &,
+  &.btn-lg,
+  &.btn-sm,
+  &.btn-xs
+    padding-left 0
+    padding-right @padding-left
+
+  &.btn-lg
+    min-width $btn-height-large
+
+  &.btn-sm
+    min-width $btn-height-small
+
+  &.btn-xs
+    min-width $btn-height-xs
+
 
 // Link buttons
 // -------------------------
