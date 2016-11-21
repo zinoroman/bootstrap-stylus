@@ -21,6 +21,19 @@
       display block
       padding $nav-link-padding
 
+      &:hover,
+      &:focus
+        text-decoration none
+
+    // Disabled state sets text to gray and nukes hover/tab effects
+    &.disabled > a
+
+      &:hover,
+      &:focus
+        text-decoration none
+        background-color transparent
+        cursor $cursor-disabled
+
   // Open dropdowns
   .open > a
     &,
