@@ -2,7 +2,11 @@
 //
 // Easily pump out default styles, as well as :hover, :focus, :active,
 // and disabled options for all buttons
-button-variant($color, $background, $border, $hover-color, $hover-background, $hover-border, $active-color, $active-background, $active-border)
+button-variant(
+  $color, $background, $border, 
+  $hover-color, $hover-background, $hover-border, 
+  $active-color, $active-background, $active-border
+)
   color $color
   background-color $background
   border-color $border
@@ -16,6 +20,10 @@ button-variant($color, $background, $border, $hover-color, $hover-background, $h
 
   &:active,
   &.active,
+    color $active-color
+    background-color $active-background
+    border-color $active-border
+    
   .open > .dropdown-toggle&
     color $active-color
     background-color $active-background
