@@ -115,6 +115,39 @@
 .btn-xs
   button-size($btn-height-xs, $padding-xs-horizontal, $control-fs-xs, $control-bdw-xs, $btn-border-radius-base)
 
+.btn-wide
+  padding-left ($padding-base-horizontal * $btn-wide-multiplier)
+  padding-right @padding-left
+
+  &.btn-lg
+    padding-left ($padding-large-horizontal * $btn-wide-multiplier)
+    padding-right @padding-left
+
+  &.btn-sm
+    padding-left ($padding-small-horizontal * $btn-wide-multiplier)
+    padding-right @padding-left
+
+  &.btn-xs
+    padding-left ($padding-xs-horizontal * $btn-wide-multiplier)
+    padding-right @padding-left
+
+.btn-condensed
+  padding-left ($padding-base-horizontal / $btn-condensed-divider)
+  padding-right @padding-left
+
+  &.btn-lg
+    padding-left ($padding-large-horizontal / $btn-condensed-divider)
+    padding-right @padding-left
+
+  &.btn-sm
+    padding-left ($padding-small-horizontal / $btn-condensed-divider)
+    padding-right @padding-left
+
+  &.btn-xs
+    padding-left ($padding-xs-horizontal / $btn-condensed-divider)
+    padding-right @padding-left
+
+
 
 // Block button
 // --------------------------------------------------
