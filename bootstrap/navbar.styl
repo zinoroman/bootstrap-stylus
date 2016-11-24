@@ -200,7 +200,7 @@
 // the nav the full height of the horizontal nav (above 768px).
 
 .navbar-nav
-  margin ($navbar-padding-vertical / 2) (-($navbar-padding-horizontal))
+  margin 0
 
   > li > a
     padding-top 10px
@@ -226,16 +226,11 @@
         &:focus
           background-image none
 
-  // Uncollapse the nav
-  @media (min-width $grid-float-breakpoint)
+  > li
     float left
-    margin 0
-
-    > li
-      float left
-      > a
-        padding-top $navbar-padding-vertical
-        padding-bottom $navbar-padding-vertical
+    > a
+      padding-top $navbar-padding-vertical
+      padding-bottom $navbar-padding-vertical
 
 
 // Navbar form
@@ -322,16 +317,11 @@
 //
 // Declared after the navbar components to ensure more specificity on the margins.
 
-@media (min-width $grid-float-breakpoint)
-  .navbar-left
-    float left !important
+.navbar-left
+  float left !important
 
-  .navbar-right
-    float right !important
-    margin-right -($navbar-padding-horizontal)
-
-    ~ .navbar-right
-      margin-right 0
+.navbar-right
+  float right !important
 
 
 // Alternate navbars
