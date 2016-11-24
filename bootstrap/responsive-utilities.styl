@@ -23,12 +23,16 @@
 
 // Visibility utilities
 // Note Deprecated .visible-xs, .visible-sm, .visible-md, and .visible-lg as of v3.2.0
+.visible-xxs,
 .visible-xs,
 .visible-sm,
 .visible-md,
 .visible-lg
   responsive-invisibility()
 
+.visible-xxs-block,
+.visible-xxs-inline,
+.visible-xxs-inline-block,
 .visible-xs-block,
 .visible-xs-inline,
 .visible-xs-inline-block,
@@ -43,20 +47,36 @@
 .visible-lg-inline-block
   display none !important
 
+.visible-xxs
+  @media (max-width $screen-xs-min - 1)
+    responsive-visibility()
+
+.visible-xxs-block
+  @media (max-width $screen-xs-min - 1)
+    display block !important
+
+.visible-xxs-inline
+  @media (max-width $screen-xs-min - 1)
+    display inline !important
+
+.visible-xxs-inline-block
+  @media (max-width $screen-xs-min - 1)
+    display inline-block !important
+
 .visible-xs
-  @media (max-width $screen-xs-max)
+  @media (min-width $screen-xs-min) and (max-width $screen-xs-max)
     responsive-visibility()
 
 .visible-xs-block
-  @media (max-width $screen-xs-max)
+  @media (min-width $screen-xs-min) and (max-width $screen-xs-max)
     display block !important
 
 .visible-xs-inline
-  @media (max-width $screen-xs-max)
+  @media (min-width $screen-xs-min) and (max-width $screen-xs-max)
     display inline !important
 
 .visible-xs-inline-block
-  @media (max-width $screen-xs-max)
+  @media (min-width $screen-xs-min) and (max-width $screen-xs-max)
     display inline-block !important
 
 .visible-sm
@@ -107,8 +127,12 @@
   @media (min-width $screen-lg-min)
     display inline-block !important
 
+.hidden-xxs
+  @media (max-width $screen-xs-min - 1)
+    responsive-invisibility()
+
 .hidden-xs
-  @media (max-width $screen-xs-max)
+  @media (min-width $screen-xs-min) and (max-width $screen-xs-max)
     responsive-invisibility()
 
 .hidden-sm
