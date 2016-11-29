@@ -130,26 +130,19 @@
 // -------------------------
 
 .nav-justified
-  width 100%
+  display flex
 
   > li
+    display flex
     float none
 
     > a
+      display flex
       text-align center
-      margin-bottom 5px
 
   > .dropdown .dropdown-menu
     top auto
     left auto
-
-  @media (min-width $screen-sm-min)
-    > li
-      display table-cell
-      width 1%
-
-      > a
-        margin-bottom 0
 
 // Move borders to anchors instead of bottom of list
 //
