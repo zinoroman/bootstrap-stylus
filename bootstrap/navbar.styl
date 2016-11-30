@@ -144,7 +144,7 @@
   float left
   padding $navbar-padding-vertical $navbar-padding-horizontal
   font-size $font-size-large
-  line-height $line-height-computed
+  line-height $line-height-base
   height $navbar-height
 
   &:hover,
@@ -206,7 +206,7 @@
   > li > a
     padding-top 10px
     padding-bottom 10px
-    line-height $line-height-computed
+    line-height $line-height-base
 
   @media (max-width $grid-float-breakpoint-max)
     // Dropdowns get custom display when collapsed
@@ -222,7 +222,7 @@
       .dropdown-header
         padding 5px 15px 5px 25px
       > li > a
-        line-height $line-height-computed
+        line-height $line-height-base
         &:hover,
         &:focus
           background-image none
@@ -302,7 +302,7 @@
 // Add a class to make any element properly align itself vertically within the navbars.
 
 .navbar-text
-  navbar-vertical-align($line-height-computed)
+  navbar-vertical-align($line-height-base)
 
   @media (min-width $grid-float-breakpoint)
     float left
