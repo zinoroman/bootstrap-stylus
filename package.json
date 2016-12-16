@@ -1,5 +1,5 @@
 {
-  "name": "bootstrap-styl",
+  "name": "@wedes/bootstrap-styl",
   "description": "Port of the amazing Bootstrap 3.3.7 to Stylus",
   "repository": {
     "type": "git",
