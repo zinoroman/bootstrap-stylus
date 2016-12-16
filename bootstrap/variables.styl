@@ -32,6 +32,8 @@ $text-color ?=            $gray-dark
 
 //** Global textual link color.
 $link-color ?=            $brand-primary
+//** Link decoration.
+$link-decoration ?= underline
 //** Link hover color set via `darken()` function.
 $link-hover-color ?=      darken($link-color, 15)
 //** Link hover decoration.
@@ -148,28 +150,28 @@ $table-border-color ?=           #ddd
 
 //Xsmall control
 
-$control-height-xs = 30px
-$control-bdw-xs = 1px
-$control-fs-xs = $font-size-small 
+$control-height-xs ?= 30px
+$control-bdw-xs ?= 1px
+$control-fs-xs ?= $font-size-small 
 
 
 //Small control
 
-$control-height-small = 35px
-$control-bdw-small = 1px
-$control-fs-small = $font-size-small 
+$control-height-small ?= 35px
+$control-bdw-small ?= 1px
+$control-fs-small ?= $font-size-small 
 
 //Base control
 
-$control-height-base = 40px
-$control-bdw-base = 1px
-$control-fs-base = $font-size-base 
+$control-height-base ?= 40px
+$control-bdw-base ?= 1px
+$control-fs-base ?= $font-size-base 
 
 //Large control
 
-$control-height-large = 50px
-$control-bdw-large = 1px
-$control-fs-large = $font-size-large
+$control-height-large ?= 50px
+$control-bdw-large ?= 1px
+$control-fs-large ?= $font-size-large
 
 //== Buttons
 //
