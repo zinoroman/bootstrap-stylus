@@ -5,24 +5,19 @@
 make-grid-columns()
   $col
     position relative
-    // Prevent columns from collapsing when empty
-    min-height 1px
+    flex-grow 0
+    flex-shrink 0
     // Inner gutter via padding
     padding-left ceil($grid-gutter-width / 2)
     padding-right floor($grid-gutter-width / 2)
 
   // Common styles for all sizes of grid columns, widths 1-12
   for $index in 1..$grid-columns
-    .col-xs-{$index}, .col-sm-{$index}, .col-md-{$index}, .col-lg-{$index}
+    .col-xs-{$index}, 
+    .col-sm-{$index}, 
+    .col-md-{$index}, 
+    .col-lg-{$index}
       @extend $col
-
-float-grid-columns($class)
-  $col-float-{$class}
-    float left
-
-  for $index in 1..$grid-columns
-    .col-{$class}-{$index}
-      @extend $col-float-{$class}
 
 calc-grid-column($index, $class, $type)
   if $type == width and $index > 0
@@ -50,11 +45,48 @@ loop-grid-columns($grid-columns, $class, $type)
   for $index in $grid-columns..0
     calc-grid-column($index, $class, $type)
 
+create-helper-classes($class)
+  .start-{$class}
+    justify-content flex-start
+
+  .center-{$class}
+    justify-content center
+
+  .end-{$class}
+    justify-content flex-end
+
+  .top-{$class}
+    align-items flex-start
+
+  .stretch-{$class}
+    align-items stretch
+
+    > [class*="col-"]
+      display flex
+
+  .middle-{$class}
+    align-items center
+
+  .bottom-{$class}
+    align-items flex-end
+
+  .around-{$class}
+    justify-content space-around
+
+  .between-{$class}
+    justify-content space-between
+
+  .first-{$class}
+    order -1
+
+  .last-{$class}
+    order 1
+
 // Create grid for specific $class
 make-grid($class)
-  float-grid-columns($class)
   loop-grid-columns($grid-columns, $class, width)
   loop-grid-columns($grid-columns, $class, pull)
   loop-grid-columns($grid-columns, $class, push)
   loop-grid-columns($grid-columns, $class, offset)
-
+  loop-grid-columns($grid-columns, $class, alignement)
+  create-helper-classes($class)
