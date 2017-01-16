@@ -8,6 +8,7 @@ make-grid-columns()
     flex-grow 0
     flex-shrink 0
     flex-basis 100%
+    max-width 100% //fix bug when sometimes column can be larger than 100% 
     // Inner gutter via padding
     padding-left ceil($grid-gutter-width / 2)
     padding-right floor($grid-gutter-width / 2)
