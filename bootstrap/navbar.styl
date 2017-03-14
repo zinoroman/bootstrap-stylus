@@ -29,9 +29,6 @@
 .navbar-header
   clearfix()
 
-  @media (min-width $grid-float-breakpoint)
-    float left
-
 
 // Navbar collapse (body)
 //
@@ -139,7 +136,6 @@
 // Brand/project name
 
 .navbar-brand
-  float left
   padding $navbar-padding-vertical $navbar-padding-horizontal
   font-size $font-size-large
   line-height $line-height-base
@@ -165,7 +161,7 @@
 
 .navbar-toggle
   position relative
-  float right
+  margin-left auto
   margin-right $navbar-padding-horizontal
   padding 9px 10px
   navbar-vertical-align(34px)
@@ -300,7 +296,6 @@
   navbar-vertical-align($line-height-base)
 
   @media (min-width $grid-float-breakpoint)
-    float left
     margin-left $navbar-padding-horizontal
     margin-right $navbar-padding-horizontal
 
@@ -314,10 +309,10 @@
 // Declared after the navbar components to ensure more specificity on the margins.
 
 .navbar-left
-  float left !important
+  margin-right auto
 
 .navbar-right
-  float right !important
+  margin-left auto
 
 
 // Alternate navbars
@@ -325,6 +320,7 @@
 
 // Default navbar
 .navbar-default
+  display flex
   background-color $navbar-default-bg
   border-color $navbar-default-border
 
